@@ -87,6 +87,54 @@
       "apikey": "API Key",
       "oauth": "OAuth",
       "local": "本地模型"
+    },
+    "research": {
+      "title": "深度研究",
+      "description": "将复杂问题分解为原子任务，具有持久化状态管理",
+      "startButton": "开始研究",
+      "statusLabel": "研究状态",
+      "modes": {
+        "quick": {
+          "label": "快速",
+          "description": "2-3 个高级任务（约 5 分钟）"
+        },
+        "standard": {
+          "label": "标准",
+          "description": "5-7 个任务（约 15 分钟）"
+        },
+        "deep": {
+          "label": "深度",
+          "description": "9+ 综合任务（约 30+ 分钟）"
+        }
+      },
+      "status": {
+        "idle": "无活跃研究",
+        "planning": "规划任务中...",
+        "executing": "执行任务 {{current}}/{{total}}",
+        "summarizing": "总结结果中...",
+        "synthesizing": "合成最终报告...",
+        "completed": "研究完成",
+        "failed": "研究失败",
+        "paused": "研究已暂停"
+      },
+      "actions": {
+        "viewPlan": "查看计划",
+        "viewResults": "查看结果",
+        "downloadReport": "下载报告",
+        "resume": "恢复",
+        "cancel": "取消研究",
+        "newResearch": "新研究"
+      },
+      "progress": {
+        "tasksCompleted": "已完成 {{completed}}/{{total}} 个任务",
+        "estimatedTimeRemaining": "剩余约 {{minutes}} 分钟"
+      },
+      "notifications": {
+        "started": "研究'{{goal}}'已以{{mode}}模式启动",
+        "completed": "研究完成！报告已保存至 {{path}}",
+        "failed": "研究失败：{{error}}",
+        "resumed": "研究已从检查点恢复"
+      }
     }
   },
   "header": {
