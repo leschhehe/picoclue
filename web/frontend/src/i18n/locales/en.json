@@ -87,6 +87,54 @@
       "apikey": "API Key",
       "oauth": "OAuth",
       "local": "Local"
+    },
+    "research": {
+      "title": "Deep Research",
+      "description": "Break down complex questions into atomic tasks with persistent state management",
+      "startButton": "Start Research",
+      "statusLabel": "Research Status",
+      "modes": {
+        "quick": {
+          "label": "Quick",
+          "description": "2-3 high-level tasks (~5 min)"
+        },
+        "standard": {
+          "label": "Standard",
+          "description": "5-7 tasks (~15 min)"
+        },
+        "deep": {
+          "label": "Deep",
+          "description": "9+ comprehensive tasks (~30+ min)"
+        }
+      },
+      "status": {
+        "idle": "No active research",
+        "planning": "Planning tasks...",
+        "executing": "Executing task {{current}}/{{total}}",
+        "summarizing": "Summarizing results...",
+        "synthesizing": "Synthesizing final report...",
+        "completed": "Research completed",
+        "failed": "Research failed",
+        "paused": "Research paused"
+      },
+      "actions": {
+        "viewPlan": "View Plan",
+        "viewResults": "View Results",
+        "downloadReport": "Download Report",
+        "resume": "Resume",
+        "cancel": "Cancel Research",
+        "newResearch": "New Research"
+      },
+      "progress": {
+        "tasksCompleted": "{{completed}}/{{total}} tasks completed",
+        "estimatedTimeRemaining": "~{{minutes}} min remaining"
+      },
+      "notifications": {
+        "started": "Research '{{goal}}' started in {{mode}} mode",
+        "completed": "Research completed! Report saved to {{path}}",
+        "failed": "Research failed: {{error}}",
+        "resumed": "Research resumed from checkpoint"
+      }
     }
   },
   "header": {

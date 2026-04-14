@@ -10,6 +10,7 @@ import {
 } from "@/components/chat/chat-composer"
 import { ChatEmptyState } from "@/components/chat/chat-empty-state"
 import { ModelSelector } from "@/components/chat/model-selector"
+import { ResearchPanel } from "@/components/chat/research-panel"
 import { SessionHistoryMenu } from "@/components/chat/session-history-menu"
 import { TypingIndicator } from "@/components/chat/typing-indicator"
 import { UserMessage } from "@/components/chat/user-message"
@@ -296,6 +297,19 @@ export function ChatPage() {
         onScroll={handleScroll}
         className="min-h-0 flex-1 overflow-y-auto px-4 py-6 md:px-8 lg:px-24 xl:px-48"
       >
+        <ResearchPanel
+          currentSession={undefined}
+          onStartResearch={(goal, mode) => {
+            sendMessage({ content: `/research ${mode} ${goal}`, attachments: [] })
+          }}
+          onResumeResearch={(sessionId) => {
+            sendMessage({ content: `/research resume`, attachments: [] })
+          }}
+          onCancelResearch={(sessionId) => {
+            sendMessage({ content: `/research cancel`, attachments: [] })
+          }}
+        />
+
         <div className="mx-auto flex w-full max-w-250 flex-col gap-8 pb-8">
           {messages.length === 0 && !isTyping && (
             <ChatEmptyState
